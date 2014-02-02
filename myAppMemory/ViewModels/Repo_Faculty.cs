@@ -12,11 +12,19 @@ namespace myAppMemory.ViewModels {
     }
 
     // create a Faculty record
-
+    public FacultyFull createFaculty(FacultyFull fa) {
+      Faculty fac = new Faculty(fa.FirstName, fa.LastName, fa.Phone);
+      fac.Id = Faculties.Max(n => n.Id) + 1;
+      Faculties.Add(fac);
+      return fa;
+    }
 
     // return single faculty row by id
 
 
     // return a list / collection of faculties
+
+
+    public List<Faculty> Faculties { get; set; }
   }
 }
