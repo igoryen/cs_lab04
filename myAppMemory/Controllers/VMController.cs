@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using myAppMemory.ViewModels;
+using myAppMemory.ViewModels; // 7
 
 namespace myAppMemory.Controllers {
   public class VMController : Controller {
@@ -40,6 +40,12 @@ namespace myAppMemory.Controllers {
     }
   }
 }
+
+/* 7. using folder ViewModels (its classes):
+ *   Repo_Students.cs
+ *   StudentName.cs
+ *   VM_Student.cs
+*/ 
 
 // Index()
 /* 30. a. Go to ViewModels/Repo_Student.cs
