@@ -43,8 +43,45 @@ namespace myAppMemory.Models {
 
       Students.Add(student);
 
+      //------------------------------------
+      
+      this.Faculties = new List<Faculty>();
+
+      Faculty faculty = new Faculty();
+      faculty.Id = 1;
+      faculty.FirstName = "April";
+      faculty.LastName = "May";
+      faculty.Phone = "555-555-5555";
+
+      Faculties.Add(faculty);
+      faculty = null;
+
+      Faculty faculty = new Faculty();
+      faculty.Id = 1;
+      faculty.FirstName = "Brock";
+      faculty.LastName = "Lee";
+      faculty.Phone = "555-555-5555";
+
+      Faculties.Add(faculty);
+      faculty = null;
+
+      Faculty faculty = new Faculty();
+      faculty.Id = 1;
+      faculty.FirstName = "Doug";
+      faculty.LastName = "Hole";
+      faculty.Phone = "555-555-5555";
+
+      Faculties.Add(faculty);
+      faculty = null;
+
+      faculty = new Faculty("Hy", "Ball", "555-555-1234", "011111114");
+      faculty.Id = 4;
+
+      Faculties.Add(faculty);
+
     }
 
     public List<Student> Students { get; set; }
+    public List<Faculty> Faculties { get; set; }
   }
 }
