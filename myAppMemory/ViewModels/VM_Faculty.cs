@@ -7,6 +7,15 @@ using System.Web;
 namespace myAppMemory.ViewModels {
   public class VM_Faculty {
 
+    public class FacultiesForList {
+      [Key]
+      public int FacultyId { get; set; }
+
+      [Required]
+      [RegularExpression("^[0][0-9]{8}$", ErrorMessage = "0 followed by 8 digits")]
+      public string LastName { get; set; }
+    }
+
     public class FacultyFull : FacultiesForList {
       [Required]
       [StringLength(40, MinimumLength = 3)]
