@@ -20,6 +20,15 @@ namespace myAppMemory.ViewModels {
     }
 
     // return single faculty row by id
+    public FacultyPublic getFacultyPublic(int? id) {
+      var fa = Faculties.FirstOrDefault(n => n.Id == id);
+      FacultyPublic fac = new FacultyPublic();
+      fac.FirstName = fa.FirstName;
+      fac.LastName = fa.LastName;
+      fac.Phone = fa.Phone;
+      fac.StudentNumber = fa.StudentNumber;
+      return fac;
+    }
 
 
     // return a list / collection of faculties
