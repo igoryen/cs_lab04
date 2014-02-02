@@ -1,0 +1,110 @@
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\obj\Debug\myAppMemory.csprojResolveAssemblyReference.cache
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\myAppMemory.dll.config
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\myAppMemory.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\myAppMemory.pdb
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Antlr3.Runtime.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\EntityFramework.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\EntityFramework.SqlServer.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Newtonsoft.Json.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Owin.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.Helpers.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.Mvc.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.Optimization.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.Razor.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.WebPages.Deployment.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.WebPages.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.WebPages.Razor.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\WebGrease.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.Helpers.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.Mvc.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.Optimization.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.Razor.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.WebPages.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.WebPages.Deployment.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\System.Web.WebPages.Razor.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Newtonsoft.Json.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Antlr3.Runtime.pdb
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\EntityFramework.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\EntityFramework.SqlServer.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\obj\Debug\myAppMemory.dll
+C:\Users\mark\Documents\Course Content\int422\mark\week_2\myAppMemory\myAppMemory\obj\Debug\myAppMemory.pdb
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\myAppMemory.dll.config
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\myAppMemory.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\myAppMemory.pdb
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Antlr3.Runtime.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\EntityFramework.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\EntityFramework.SqlServer.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.Core.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Cookies.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Facebook.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Google.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.OAuth.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Twitter.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Web.Infrastructure.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Newtonsoft.Json.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Owin.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.Helpers.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.Mvc.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.Optimization.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.Razor.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.WebPages.Deployment.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.WebPages.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.WebPages.Razor.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\WebGrease.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.Helpers.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.Mvc.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.Optimization.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.Razor.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.WebPages.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.WebPages.Deployment.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\System.Web.WebPages.Razor.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Newtonsoft.Json.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Antlr3.Runtime.pdb
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\EntityFramework.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\EntityFramework.SqlServer.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.Core.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Facebook.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Cookies.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.OAuth.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Google.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.Twitter.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\obj\Debug\myAppMemory.csprojResolveAssemblyReference.cache
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\obj\Debug\myAppMemory.dll
+C:\aaa\vat\c#\cs_lab03_t\myAppMemory\myAppMemory\obj\Debug\myAppMemory.pdb
