@@ -36,6 +36,7 @@ namespace myAppMemory.Models {
   public class Student : Person {
     public Student() {
       StudentNumber = string.Empty;
+      this.Courses = new List<Course>();
     }
 
     public Student(string f, string l, string p, string sid)
