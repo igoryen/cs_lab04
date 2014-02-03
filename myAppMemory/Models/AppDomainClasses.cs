@@ -68,4 +68,16 @@ namespace myAppMemory.Models {
 
     public List<Course> Courses { get; set; }
   }
+
+  public class Course {
+    public Course() {
+      this.Students = new List<Student>();
+    }
+    [Key]
+    public int Id { get; set; }
+    public string CourseName { get; set; }
+    public string CourseCode { get; set; }
+    public List<Student> Students { get; set; }
+    public Faculty Faculty { get; set; }
+  }
 }
