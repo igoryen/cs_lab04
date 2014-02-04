@@ -55,6 +55,20 @@ namespace myAppMemory.ViewModels {
       return rls;  // 50
     }
 
+    public StudentFull getStudentFull(int? id) {
+      var st = dc.Students.FirstOrDefault(n => n.Id == id);
+
+      StudentFull stu = new StudentFull();
+      stu.FirstName = st.FirstName;
+      stu.LastName = st.LastName;
+      stu.Phone = st.Phone;
+      stu.StudentNumber = st.StudentNumber;
+      stu.Courses = Repo_Courses.getCourseForList(st.Courses);
+
+      return stu;
+
+    }
+
     public IEnumerable<StudentFull> getStudentsFull() { // 55
       
       var ls = dc.Students.Include("Courses").OrderBy(n => n.LastName);     // 60
