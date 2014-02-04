@@ -56,4 +56,21 @@ namespace myAppMemory.ViewModels {
     [RegularExpression("^[2-9]\\d{2}-\\d{3}-\\d{4}$", ErrorMessage = "nnn-nnn-nnnn")]
     public string Phone { get; set; }
   }
+
+  public class StudentName {
+
+    [Key]
+    public int StudentId { get; set; }
+
+    [Required]
+    [StringLength(40, MinimumLength = 3)]
+    [Display(Name = "First Name")]
+    public string FirstName { get; set; }
+
+    [Required]
+    [StringLength(100, MinimumLength = 3)]
+    [Display(Name = "Last Name")]
+    public string LastName { get; set; }
+  }
+
 }
