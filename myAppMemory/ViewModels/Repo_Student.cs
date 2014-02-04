@@ -109,11 +109,25 @@ namespace myAppMemory.ViewModels {
 
     //public IEnumerable<StudentPublic> getStudentsPublic()
 
-    public StudentFull createStudent(StudentFull st) {
-      Student stu = new Student(st.FirstName, st.LastName, st.Phone, st.StudentNumber);
-      stu.Id = Students.Max(n => n.Id) + 1;
-      Students.Add(stu);
-      return st;
+    public StudentFull createStudent(StudentFull st, string ids) {
+      Student stu = new Student(st.FirstName, st.LastName, st.Phone, st.StudentNumber); // 100 
+
+      List<Int32> ls = new List<int>(); // 105
+      var nums = ids.Split(','); // 110
+
+      foreach (var item in nums) { // 115
+        ls.Add(Convert.ToInt32(item));
+      }
+
+      foreach (var item in ls) { // 120
+        stu.Courses.Add(dc.Courses.FirstOrDefault(n => n.Id == item));
+      }
+
+      dc.Students.Add(stu); // 125
+
+      dc.SaveChanges(); // 130
+
+      return getStudentFull(stu.Id); // 135
     }
 
     public List<Student> Students { get; set; }
@@ -150,4 +164,14 @@ namespace myAppMemory.ViewModels {
  * 51. add the StudentPublic to the list for StudentPublic's
  * 52. 
  */
-
+// createStudent()
+/* 100. make a new 4-column row "Student" and fill it out 
+ * 105. make a list/column of int32 objects
+ * 110. reformat ids into ("n,n,n,...") where n is an numeric character
+        split the string into an array of individual characters
+ * 115. convert each character to an int32 and store in ls
+ * 120. iterate through ls and for each id in the list, add a Course to the student's Courses collection
+ * 125. add the filled out 4-column row "Student" to the DataContext
+ * 130. savechanges is the equivalent to a database "commit" statement
+ * 135. return a copy of the new 4-column row "Student" as a StudentFull
+ */
