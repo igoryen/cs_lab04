@@ -172,9 +172,12 @@
     <Compile Include="Models\Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\RepositoryBase.cs" />
+    <Compile Include="ViewModels\Repo_Courses.cs" />
     <Compile Include="ViewModels\Repo_Faculty.cs" />
     <Compile Include="ViewModels\Repo_Student.cs" />
     <Compile Include="ViewModels\StudentName.cs" />
+    <Compile Include="ViewModels\VM_Courses.cs" />
     <Compile Include="ViewModels\VM_Faculty.cs" />
     <Compile Include="ViewModels\VM_Student.cs" />
   </ItemGroup>
