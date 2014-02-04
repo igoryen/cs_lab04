@@ -8,7 +8,7 @@ using myAppMemory.Models;
 namespace myAppMemory.ViewModels {
     public class FacultiesForList {
       [Key]
-      public int FacultyNumber { get; set; }
+      public string FacultyNumber { get; set; }
     }
 
     public class FacultyFull : FacultiesForList {
