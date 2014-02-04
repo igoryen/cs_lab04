@@ -47,6 +47,7 @@ namespace myAppMemory.Models {
     [Required]
     [RegularExpression("^[0][0-9]{8}$", ErrorMessage = "0 followed by 8 digits")]
     public string StudentNumber { get; set; }
+    public List<Course> Courses { get; set; }
   }
 
   public class Faculty : Person {
