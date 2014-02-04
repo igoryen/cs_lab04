@@ -13,5 +13,7 @@ namespace myAppMemory.Models {
     public DbSet<Course> Courses { get; set; }
 
     public System.Data.Entity.DbSet<myAppMemory.ViewModels.StudentFull> StudentFulls { get; set; }
+
+    public System.Data.Entity.DbSet<myAppMemory.ViewModels.FacultyPublic> FacultyPublics { get; set; }
   }
 }
