@@ -130,6 +130,17 @@ namespace myAppMemory.ViewModels {
       return getStudentFull(stu.Id); // 135
     }
 
+    public StudentFull createStudent(StudentFull st) {
+
+      Student stu = new Student(st.FirstName, st.LastName, st.Phone, st.StudentNumber); // 140
+
+      dc.Students.Add(stu);
+
+      dc.SaveChanges(); // 145
+
+      return getStudentFull(stu.Id); // 150
+    }
+
     public List<Student> Students { get; set; }
   }
 }
@@ -164,7 +175,7 @@ namespace myAppMemory.ViewModels {
  * 51. add the StudentPublic to the list for StudentPublic's
  * 52. 
  */
-// createStudent()
+// createStudent(StudentFull st, string ids)
 /* 100. make a new 4-column row "Student" and fill it out 
  * 105. make a list/column of int32 objects
  * 110. reformat ids into ("n,n,n,...") where n is an numeric character
@@ -175,3 +186,10 @@ namespace myAppMemory.ViewModels {
  * 130. savechanges is the equivalent to a database "commit" statement
  * 135. return a copy of the new 4-column row "Student" as a StudentFull
  */
+
+// createStudent(StudentFull st)
+/* 140. make a new 4-column row "Student" and fill it out
+ * 145. savechanges is the equivalent to a database commit statement
+ * 150. return a copy of the new Student as a StudentFull
+ */
+
