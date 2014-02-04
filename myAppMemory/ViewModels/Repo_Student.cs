@@ -39,7 +39,7 @@ namespace myAppMemory.ViewModels {
     }
 
     public IEnumerable<StudentPublic> getStudentsPublic() { // 1
-      var ls = Students.OrderBy(n => n.StudentNumber); // 20
+      var ls = dc.Students.OrderBy(n => n.StudentNumber); // 20
       List<StudentPublic> rls = new List<StudentPublic>(); // 25
 
       foreach (var item in ls) {  // 30
