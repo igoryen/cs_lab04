@@ -5,13 +5,13 @@ using System.Web;
 using myAppMemory.Models;
 
 namespace myAppMemory.ViewModels {
-  public class Repo_Student {
+  public class Repo_Student : RepositoryBase {
     public Repo_Student() {
       this.Students = (List<Student>)HttpContext.Current.Application["Students"];
     }
 
     public IEnumerable<StudentsForList> getForList() {
-      var ls = this.Students.OrderBy(n => n.Id);
+      var ls = dc.Students.OrderBy(n => n.Id);
 
       List<StudentsForList> rls = new List<StudentsForList>();
 
