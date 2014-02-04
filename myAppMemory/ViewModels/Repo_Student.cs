@@ -57,7 +57,7 @@ namespace myAppMemory.ViewModels {
 
     public IEnumerable<StudentFull> getStudentsFull() { // 55
       
-      var ls = this.Students.OrderBy(n => n.LastName);     // 60
+      var ls = dc.Students.Include("Courses").OrderBy(n => n.LastName);     // 60
       List<StudentFull> rls = new List<StudentFull>();   // 65
 
       foreach (var item in ls) {  // 70
@@ -68,6 +68,7 @@ namespace myAppMemory.ViewModels {
         row.FirstName = item.FirstName;
         row.LastName = item.LastName;
         row.Phone = item.Phone;
+        row.Courses = Repo_Courses.getCourseForList(item.Courses);
 
         rls.Add(row);  // 85
       }
