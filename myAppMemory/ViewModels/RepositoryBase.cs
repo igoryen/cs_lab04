@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using myAppMemory.ViewModels;
+using myAppMemory.Models;
 
 namespace myAppMemory.ViewModels {
 
