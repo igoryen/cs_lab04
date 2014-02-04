@@ -8,14 +8,11 @@ using myAppMemory.Models;
 namespace myAppMemory.ViewModels {
     public class FacultiesForList {
       [Key]
-      public int FacultyId { get; set; }
-
-      [Required]
-      [RegularExpression("^[0][0-9]{8}$", ErrorMessage = "0 followed by 8 digits")]
-      public string LastName { get; set; }
+      public int FacultyNumber { get; set; }
     }
 
     public class FacultyFull : FacultiesForList {
+
       [Required]
       [StringLength(40, MinimumLength = 3)]
       [Display(Name = "First Name")]
@@ -34,7 +31,7 @@ namespace myAppMemory.ViewModels {
 
       [Required]
       [RegularExpression("^[0][0-9]{8}$", ErrorMessage = "0 followed by 8 digits")]
-      public string FacultyId { get; set; }
+      public string FacultyNumber { get; set; }
 
       [Required]
       [StringLength(40, MinimumLength = 3)]
