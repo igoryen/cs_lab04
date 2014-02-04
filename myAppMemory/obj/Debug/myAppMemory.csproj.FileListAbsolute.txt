@@ -162,3 +162,4 @@ C:\aaa\vat\c#\lab04\cs_lab04\myAppMemory\bin\Microsoft.Owin.Security.Twitter.xml
 C:\aaa\vat\c#\lab04\cs_lab04\myAppMemory\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\aaa\vat\c#\lab04\cs_lab04\myAppMemory\obj\Debug\myAppMemory.dll
 C:\aaa\vat\c#\lab04\cs_lab04\myAppMemory\obj\Debug\myAppMemory.pdb
+C:\aaa\vat\c#\lab04\cs_lab04\myAppMemory\obj\Debug\myAppMemory.csprojResolveAssemblyReference.cache

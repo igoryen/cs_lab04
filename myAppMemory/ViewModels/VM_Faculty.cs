@@ -8,6 +8,10 @@ using myAppMemory.Models;
 namespace myAppMemory.ViewModels {
     public class FacultiesForList {
       [Key]
+      public string FacultyId { get; set; }
+
+      [Required]
+      [RegularExpression("^[0][0-9]{8}$", ErrorMessage = "0 followed by 8 digits")]
       public string FacultyNumber { get; set; }
     }
 
@@ -28,6 +32,9 @@ namespace myAppMemory.ViewModels {
     }
 
     public class FacultyPublic {
+
+      [Key]
+      public int FacultyId { get; set; }
 
       [Required]
       [RegularExpression("^[0][0-9]{8}$", ErrorMessage = "0 followed by 8 digits")]

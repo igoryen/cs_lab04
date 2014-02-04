@@ -14,7 +14,7 @@ namespace myAppMemory.ViewModels {
 
     // create a Faculty record
     public FacultyFull createFaculty(FacultyFull fa) {
-      Faculty fac = new Faculty(fa.FirstName, fa.LastName, fa.Phone, fa.FacultyNumber);
+      Faculty fac = new Faculty(fa.FirstName, fa.LastName, fa.Phone, fa.FacultyId);
       fac.Id = Faculties.Max(n => n.Id) + 1;
       Faculties.Add(fac);
       return fa;
