@@ -9,19 +9,19 @@ namespace myAppMemory.Controllers
 {
       public class HomeController : Controller
       {
-          private Manager man = new Manager();
+          private Manager man = new Manager(); // 10
           //
           // GET: /Home/
 
           public ActionResult Index()
           {
-              ViewBag.stu = man.sortStudents();
+              ViewBag.stu = man.sortStudents(); // 20
               return View();
           }
 
           public ActionResult ViewAll()
           {
-              return View(man.sortStudents());
+              return View(man.sortStudents()); // 30
           }
 
           public ActionResult Create()
@@ -32,7 +32,7 @@ namespace myAppMemory.Controllers
           [HttpPost]
           public ActionResult Create(Student student)
           {
-              if (ModelState.IsValid)
+              if (ModelState.IsValid) // 50
               {
                   man.createStudent(student);
                   return RedirectToAction("ViewAll");
@@ -45,7 +45,7 @@ namespace myAppMemory.Controllers
 
           public ActionResult Ddl()
           {
-              ViewBag.li = man.getSelectList();
+              ViewBag.li = man.getSelectList(); // 60
               return View();
           }
 
@@ -63,3 +63,22 @@ namespace myAppMemory.Controllers
 
       }
   }
+
+// 10. Materialize/make a manager
+
+// Index()
+/* 20. call Manager.cs/sortStudents(); store the retval in a var; put it into the ViewBag
+ */
+
+// ViewAll()
+/* 30. == #20?
+ */
+
+// Create(Student student)
+/* 50. 
+ * 
+ */
+
+// Ddl()
+/* 60. == #20
+ */
