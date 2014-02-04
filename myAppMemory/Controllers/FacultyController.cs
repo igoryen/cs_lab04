@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using myAppMemory.ViewModels;
 
 namespace myAppMemory.Controllers {
   public class FacultyController : Controller {
+
+    private Repo_Faculty repo = new Repo_Faculty();
 
     //
     // GET: /Faculty/
@@ -16,7 +19,11 @@ namespace myAppMemory.Controllers {
     //
     // GET: /Faculty/Details/5
     public ActionResult Details(int id) {
-      return View();
+      return View(repo.getFacultyPublic(id));
+    }
+
+    private ActionResult View(FacultyPublic facultyPublic) {
+      throw new NotImplementedException();
     }
 
     //
