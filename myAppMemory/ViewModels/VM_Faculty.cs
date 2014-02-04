@@ -6,8 +6,6 @@ using System.Web;
 using myAppMemory.Models;
 
 namespace myAppMemory.ViewModels {
-  public class VM_Faculty {
-
     public class FacultiesForList {
       [Key]
       public int FacultyId { get; set; }
@@ -52,5 +50,4 @@ namespace myAppMemory.ViewModels {
       public string Phone { get; set; }
     }
 
-  }
 }
