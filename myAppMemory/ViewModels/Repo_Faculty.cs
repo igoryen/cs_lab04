@@ -50,6 +50,9 @@ namespace myAppMemory.ViewModels {
       return rls;  // 50
     }
 
+    public IEnumerable<Faculty> sortFaculties() {
+      return Faculties.OrderBy(n => n.Id);
+    }
 
     public List<Faculty> Faculties { get; set; }
   }
