@@ -54,4 +54,20 @@ namespace myAppMemory.ViewModels {
       public string Phone { get; set; }
     }
 
+    public class FacultyName {
+
+      [Key]
+      public int FacultyId { get; set; }
+
+      [Required]
+      [StringLength(40, MinimumLength = 3)]
+      [Display(Name = "First Name")]
+      public string FirstName { get; set; }
+
+      [Required]
+      [StringLength(100, MinimumLength = 3)]
+      [Display(Name = "Last Name")]
+      public string LastName { get; set; }
+    }
+
 }
