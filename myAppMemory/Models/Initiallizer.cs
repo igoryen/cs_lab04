@@ -65,6 +65,7 @@ namespace myAppMemory.Models {
 
       student = new Student("John", "Woo", "555-555-1234", "011111114");
       student.Id = 4;
+      student.Courses = new List<Course>();
       student.Courses.Add(jac444);
       student.Courses.Add(int422);
 
