@@ -5,8 +5,11 @@ using System.Web;
 using System.Data.Entity;
 
 namespace myAppMemory.Models {
-  public class Initiallizer : DropCreateDatabaseAlways<DataContext> {
-    protected override void Seed(DataContext dc) {
+  public class Initiallizer /*: DropCreateDatabaseAlways<DataContext>*/ {
+    //protected override void Seed(DataContext dc) {
+    public Initiallizer(){
+
+      this.Students = new List<Student>();
 
       Course int422 = new Course();
       int422.CourseCode = "INT422";
@@ -28,7 +31,8 @@ namespace myAppMemory.Models {
       student.Courses.Add(jac444);
       student.Courses.Add(int422);
 
-      dc.Students.Add(student);
+      //dc.Students.Add(student);
+      Students.Add(student);
       int422.Students.Add(student);
       jac444.Students.Add(student);
       student = null;
@@ -43,7 +47,8 @@ namespace myAppMemory.Models {
       student.Courses.Add(jac444);
       student.Courses.Add(int422);
 
-      dc.Students.Add(student);
+      //dc.Students.Add(student);
+      Students.Add(student);
       int422.Students.Add(student);
       jac444.Students.Add(student);
       student = null;
@@ -58,7 +63,8 @@ namespace myAppMemory.Models {
       student.Courses.Add(jac444);
       student.Courses.Add(int422);
 
-      dc.Students.Add(student);
+      //dc.Students.Add(student);
+      Students.Add(student); 
       int422.Students.Add(student);
       jac444.Students.Add(student);
       student = null;
@@ -70,12 +76,13 @@ namespace myAppMemory.Models {
       student.Courses.Add(jac444);
       student.Courses.Add(int422);
 
-      dc.Students.Add(student);
+      //dc.Students.Add(student);
+      Students.Add(student);
       int422.Students.Add(student);
       jac444.Students.Add(student);
 
-      dc.Courses.Add(int422);
-      dc.Courses.Add(jac444);
+      //dc.Courses.Add(int422);
+      //dc.Courses.Add(jac444);
 
       //------------------------------------
 
@@ -83,11 +90,14 @@ namespace myAppMemory.Models {
       fac.Courses = new List<Course>();
       fac.Courses.Add(jac444);
       fac.Courses.Add(int422);
-      dc.Faculty.Add(fac);
+      //dc.Faculty.Add(fac);
 
-      dc.SaveChanges();
+      //dc.SaveChanges();
 
     }
 
+    public List<Student> Students { get; set; }
+    public List<Faculty> Faculties { get; set; }
+    public List<Course> Courses { get; set; }
   }
 }
