@@ -17,6 +17,7 @@ namespace myAppMemory.Models {
       jac444.CourseName = "Java";
       jac444.CourseCode = "JAC444";
 
+      Faculty fac = new Faculty();
 
       Student student = new Student();
       student.Id = 1;
@@ -78,7 +79,8 @@ namespace myAppMemory.Models {
 
       //------------------------------------
 
-      Faculty fac = new Faculty("Peter", "McIntyre", "555-567-6789", "034234678");
+      fac = new Faculty("Peter", "McIntyre", "555-567-6789", "034234678");
+      fac.Courses = new List<Course>();
       fac.Courses.Add(jac444);
       fac.Courses.Add(int422);
       dc.Faculty.Add(fac);

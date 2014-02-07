@@ -51,7 +51,26 @@ namespace myAppMemory.ViewModels {
     }
 
     public IEnumerable<Faculty> sortFaculties() {
-      return Faculties.OrderBy(n => n.Id);
+      var retval = Faculties.OrderBy(n => n.Id);
+     // if (retval == null) { System.Console.WriteLine()}
+      return retval ;
+    }
+
+    public IEnumerable<FacultyName> getFacultyNames() { // 95
+
+      var ls = this.Faculties.OrderBy(n => n.LastName);    // 100
+      List<FacultyName> rls = new List<FacultyName>();    // 105
+
+      foreach (var item in ls) {      // 110
+        FacultyName row = new FacultyName(); // 115
+
+        row.FacultyId = item.Id; // 50
+        row.FirstName = item.FirstName;
+        row.LastName = item.LastName;
+
+        rls.Add(row); // 51 
+      }
+      return rls; // 52
     }
 
     public List<Faculty> Faculties { get; set; }

@@ -14,6 +14,7 @@ namespace myAppMemory.Controllers {
     // GET: /Faculty/
     public ActionResult Index() {
       ViewBag.facs = repo.sortFaculties(); // 20
+      //return View(repo.getFacultyNames());
       return View();
     }
 
