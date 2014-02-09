@@ -5,13 +5,15 @@ using System.Web;
 using myAppMemory.Models;
 
 namespace myAppMemory.ViewModels {
-  public class Repo_Student : RepositoryBase {
+  public class Repo_Student /*: RepositoryBase*/ {
     public Repo_Student() {
       this.Students = (List<Student>)HttpContext.Current.Application["Students"];
     }
 
     public IEnumerable<StudentsForList> getForList() {
-      var ls = dc.Students.OrderBy(n => n.Id);
+      //var ls = dc.Students.OrderBy(n => n.Id);
+      var ls = this.Students.OrderBy(n => n.Id);
+
 
       List<StudentsForList> rls = new List<StudentsForList>();
 
@@ -26,7 +28,8 @@ namespace myAppMemory.ViewModels {
     }
 
     public StudentPublic getStudentPublic(int? id) {
-      var st = dc.Students.FirstOrDefault(n => n.Id == id);
+      //var st = dc.Students.FirstOrDefault(n => n.Id == id);
+      var st = Students.FirstOrDefault(n => n.Id == id);
 
       StudentPublic stu = new StudentPublic();
       stu.FirstName = st.FirstName;
@@ -39,10 +42,11 @@ namespace myAppMemory.ViewModels {
     }
 
     public IEnumerable<StudentPublic> getStudentsPublic() { // 1
-      var ls = dc.Students.OrderBy(n => n.StudentNumber); // 20
+      //var ls = dc.Students.OrderBy(n => n.StudentNumber); // 20
+      var st = this.Students.OrderBy(n => n.StudentNumber); // 20
       List<StudentPublic> rls = new List<StudentPublic>(); // 25
 
-      foreach (var item in ls) {  // 30
+      foreach (var item in st) {  // 30
         StudentPublic row = new StudentPublic();   // 35
         
         row.StudentNumber = item.StudentNumber;  // 40 
@@ -54,9 +58,10 @@ namespace myAppMemory.ViewModels {
       }
       return rls;  // 50
     }
-
+    
     public StudentFull getStudentFull(int? id) {
-      var st = dc.Students.FirstOrDefault(n => n.Id == id);
+      //var st = dc.Students.FirstOrDefault(n => n.Id == id);
+      var st = Students.FirstOrDefault(n => n.Id == id);
 
       StudentFull stu = new StudentFull();
       stu.FirstName = st.FirstName;
@@ -71,10 +76,11 @@ namespace myAppMemory.ViewModels {
 
     public IEnumerable<StudentFull> getStudentsFull() { // 55
       
-      var ls = dc.Students.Include("Courses").OrderBy(n => n.LastName);     // 60
+      //var ls = dc.Students.Include("Courses").OrderBy(n => n.LastName);     // 60
+      var st = this.Students.OrderBy(n => n.LastName);     // 60
       List<StudentFull> rls = new List<StudentFull>();   // 65
 
-      foreach (var item in ls) {  // 70
+      foreach (var item in st) {  // 70
         StudentFull row = new StudentFull();   // 75
 
         row.StudentId = item.Id;  // 80
@@ -91,10 +97,10 @@ namespace myAppMemory.ViewModels {
 
     public IEnumerable<StudentName> getStudentNames() { // 95
 
-      var ls = this.Students.OrderBy(n => n.LastName);    // 100
+      var st = this.Students.OrderBy(n => n.LastName);    // 100
       List<StudentName> rls = new List<StudentName>();    // 105
 
-      foreach (var item in ls) {      // 110
+      foreach (var item in st) {      // 110
         StudentName row = new StudentName(); // 115
 
         row.StudentId = item.Id; // 50
@@ -109,9 +115,13 @@ namespace myAppMemory.ViewModels {
 
     //public IEnumerable<StudentPublic> getStudentsPublic()
 
-    public StudentFull createStudent(StudentFull st, string ids) {
+    public StudentFull createStudent(StudentFull st/*, string ids*/) {
       Student stu = new Student(st.FirstName, st.LastName, st.Phone, st.StudentNumber); // 100 
 
+      stu.Id = Students.Max(n => n.Id) + 1;
+      Students.Add(stu);
+      return st;
+      /*
       List<Int32> ls = new List<int>(); // 105
       var nums = ids.Split(','); // 110
 
@@ -128,8 +138,10 @@ namespace myAppMemory.ViewModels {
       dc.SaveChanges(); // 130
 
       return getStudentFull(stu.Id); // 135
+      */
     }
 
+    /*
     public StudentFull createStudent(StudentFull st) {
 
       Student stu = new Student(st.FirstName, st.LastName, st.Phone, st.StudentNumber); // 140
@@ -139,7 +151,7 @@ namespace myAppMemory.ViewModels {
       dc.SaveChanges(); // 145
 
       return getStudentFull(stu.Id); // 150
-    }
+    }*/
 
     public List<Student> Students { get; set; }
   }
