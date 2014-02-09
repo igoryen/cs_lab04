@@ -24,9 +24,9 @@ namespace myAppMemory.Controllers {
       return View(repo.getFacultyPublic(id));
     }
 
-    private ActionResult View(FacultyPublic facultyPublic) {
+    /*private ActionResult View(FacultyPublic facultyPublic) {
       throw new NotImplementedException();
-    }
+    }*/
 
     //
     // GET: /Faculty/Create
