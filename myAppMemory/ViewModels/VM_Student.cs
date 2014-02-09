@@ -20,9 +20,7 @@ namespace myAppMemory.ViewModels {
     public StudentFull() {
       this.Courses = new List<CourseForList>();
     }
-    public StudentFull() {
-      this.Courses = new List<CourseForList>();
-    }
+
     [Required]
     [StringLength(40, MinimumLength = 3)]
     [Display(Name = "First Name")]

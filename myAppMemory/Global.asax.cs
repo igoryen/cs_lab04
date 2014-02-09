@@ -15,7 +15,11 @@ namespace myAppMemory {
       RouteConfig.RegisterRoutes(RouteTable.Routes);
       BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-      System.Data.Entity.Database.SetInitializer(new myAppMemory.Models.Initiallizer());
+      //System.Data.Entity.Database.SetInitializer(new myAppMemory.Models.Initiallizer());
+      Initiallizer si = new Initiallizer();
+      Application["Students"] = si.Students;
+      Application["Faculties"] = si.Faculties;
+      Application["Courses"] = si.Courses;
     }
   }
 }
