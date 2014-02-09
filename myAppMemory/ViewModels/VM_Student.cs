@@ -16,6 +16,10 @@ namespace myAppMemory.ViewModels {
   }
 
   public class StudentFull : StudentsForList {
+
+    public StudentFull() {
+      this.Courses = new List<CourseForList>();
+    }
     public StudentFull() {
       this.Courses = new List<CourseForList>();
     }
@@ -28,9 +32,11 @@ namespace myAppMemory.ViewModels {
     [StringLength(100, MinimumLength = 3)]
     [Display(Name = "Last Name")]
     public string LastName { get; set; }
+
     [Required]
     [RegularExpression("^[2-9]\\d{2}-\\d{3}-\\d{4}$", ErrorMessage = "nnn-nnn-nnnn")]
     public string Phone { get; set; }
+
     public List<CourseForList> Courses { get; set; }
   }
 
