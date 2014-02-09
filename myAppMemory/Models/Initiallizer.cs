@@ -90,11 +90,24 @@ namespace myAppMemory.Models {
       faculty.Courses = new List<Course>(); // 110
 
       faculty = new Faculty("Peter", "McIntyre", "555-567-6789", "034234678"); // 105
+      faculty.Id = 10;
       faculty.Courses.Add(jac444); // 115
       faculty.Courses.Add(int422);
       Faculties.Add(faculty);
-      //dc.Faculty.Add(fac);
 
+      faculty = new Faculty("John", "Johnson", "555-567-6790", "034234677"); // 105
+      faculty.Id = 11;
+      faculty.Courses.Add(jac444); // 115
+      faculty.Courses.Add(int422);
+      Faculties.Add(faculty);
+
+      faculty = new Faculty("Jacob", "Jacobson", "555-567-6791", "034234676"); // 105
+      faculty.Id = 12;
+      faculty.Courses.Add(jac444); // 115
+      faculty.Courses.Add(int422);
+      Faculties.Add(faculty);
+
+      //dc.Faculty.Add(fac);
       //dc.SaveChanges();
 
     }
