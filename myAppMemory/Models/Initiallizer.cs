@@ -9,33 +9,32 @@ namespace myAppMemory.Models {
     //protected override void Seed(DataContext dc) {
     public Initiallizer(){
 
-      this.Students = new List<Student>();
+      this.Students = new List<Student>(); // 10
 
-      Course int422 = new Course();
+      Course int422 = new Course(); // 15
       int422.CourseCode = "INT422";
       int422.CourseName = "Windows Web Programming";
 
 
-      Course jac444 = new Course();
+      Course jac444 = new Course(); // 15
       jac444.CourseName = "Java";
       jac444.CourseCode = "JAC444";
 
-      Faculty fac = new Faculty();
 
-      Student student = new Student();
+      Student student = new Student(); // 20
       student.Id = 1;
       student.FirstName = "Bob";
       student.LastName = "Smith";
       student.Phone = "555-555-5555";
       student.StudentNumber = "011111111";
-      student.Courses.Add(jac444);
+      student.Courses.Add(jac444);  // 30
       student.Courses.Add(int422);
 
       //dc.Students.Add(student);
-      Students.Add(student);
-      int422.Students.Add(student);
+      Students.Add(student); // 35
+      int422.Students.Add(student); // 40
       jac444.Students.Add(student);
-      student = null;
+      student = null; // 45
 
 
       student = new Student();
@@ -86,9 +85,11 @@ namespace myAppMemory.Models {
 
       //------------------------------------
 
-      fac = new Faculty("Peter", "McIntyre", "555-567-6789", "034234678");
-      fac.Courses = new List<Course>();
-      fac.Courses.Add(jac444);
+      Faculty fac = new Faculty(); // 100
+
+      fac = new Faculty("Peter", "McIntyre", "555-567-6789", "034234678"); // 105
+      fac.Courses = new List<Course>(); // 110
+      fac.Courses.Add(jac444); // 115
       fac.Courses.Add(int422);
       //dc.Faculty.Add(fac);
 
@@ -101,3 +102,19 @@ namespace myAppMemory.Models {
     public List<Course> Courses { get; set; }
   }
 }
+/*
+ * 10. make a "Students" table
+ * 
+ * 15. make a "Course" row and fill it out
+ * 
+ * 20. make a "Student" row and fill it out
+ * 30. fill out the "Student" row's "Courses" sub-column with 2 "Course" rows 
+ * 35. to the "Students" table: add the "Student" row 
+ * 40. to the "Course" row's "Students" sub-table: add the "Student" row  
+ * 45. empty the "Student" row
+ * 
+ * 100. make a "Faculty" row
+ * 105. fill out the "Faculty" row
+ * 110. in the "Faculty" row's "Courses" subtable: make a new "Courses" sub-table
+ * 115. to the "Faculty" row's "Courses" subtable: add a new "Course" row
+ */
