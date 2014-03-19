@@ -254,10 +254,15 @@
     <Content Include="Views\Cancellations\Details.cshtml" />
     <Content Include="Views\Cancellations\Edit.cshtml" />
     <Content Include="Views\Cancellations\Index.cshtml" />
+    <Content Include="Views\Course\CourseCreate.cshtml" />
+    <Content Include="Views\Course\Delete.cshtml" />
+    <Content Include="Views\Course\DeleteConfirmed.cshtml" />
+    <Content Include="Views\Course\Details.cshtml" />
+    <Content Include="Views\Course\Edit.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Course\" />
     <Folder Include="Views\Messages\" />
     <Folder Include="Views\Student\" />
   </ItemGroup>

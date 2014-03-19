@@ -31,5 +31,9 @@ namespace myAppMemory.Models {
 
     public System.Data.Entity.DbSet<myAppMemory.ViewModels.FacultyPublic> FacultyPublics { get; set; }
 
+    public System.Data.Entity.DbSet<myAppMemory.ViewModels.CourseFull> CourseFulls { get; set; }
+
+    public System.Data.Entity.DbSet<myAppMemory.ViewModels.CourseBase> CourseBases { get; set; }
+
   }
 }
