@@ -10,7 +10,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace myAppMemory.Models {
 
-  // classes alphabetically
+  // classes alphabetically: Cancellation, Course, Faculty, Message, MyUserInfo, MyDbContext, Person, Student
 
   // A
 
