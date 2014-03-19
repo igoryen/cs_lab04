@@ -8,34 +8,20 @@ using myAppMemory.ViewModels;
 namespace myAppMemory.Controllers {
   public class FacultyController : Controller {
 
-    private Repo_Faculty repo = new Repo_Faculty();
+    private Repo_Faculty rf = new Repo_Faculty();
 
-    //
-    // GET: /Faculty/
-    public ActionResult Index() {
-      //ViewBag.facs = repo.sortFaculties(); // 20
-      //return View();
-      return View(repo.getFacultyNames());
-    }
+    // C
 
-    //
-    // GET: /Faculty/Details/5
-    public ActionResult Details(int id) {
-      return View(repo.getFacultyPublic(id));
-    }
-
-    /*private ActionResult View(FacultyPublic facultyPublic) {
-      throw new NotImplementedException();
-    }*/
-
-    //
-    // GET: /Faculty/Create
+    //======================================
+    // Create() - GET: /Faculty/Create
+    //======================================
     public ActionResult Create() {
       return View();
     }
 
-    //
-    // POST: /Faculty/Create
+    //======================================
+    // Create(FormCollection collection) - POST: /Faculty/Create
+    //======================================
     [HttpPost]
     public ActionResult Create(FormCollection collection) {
       try {
@@ -48,14 +34,51 @@ namespace myAppMemory.Controllers {
       }
     }
 
-    //
-    // GET: /Faculty/Edit/5
+    // D
+
+    //======================================
+    // Details() - GET: /Faculty/Details/5
+    //======================================
+    public ActionResult Details(int id) {
+      return View(rf.amGetFacultyFull(id));
+    }
+
+
+
+
+    //======================================
+    // Delete() - GET: /Faculty/Delete/5
+    //======================================
+    public ActionResult Delete(int id) {
+      return View();
+    }
+
+
+    //======================================
+    // Delete() - POST: /Faculty/Delete/5
+    //======================================
+    [HttpPost]
+    public ActionResult Delete(int id, FormCollection collection) {
+      try {
+        // TODO: Add delete logic here
+
+        return RedirectToAction("Index");
+      }
+      catch {
+        return View();
+      }
+    }
+
+    //======================================
+    // Edit() - GET: /Faculty/Edit/5
+    //======================================
     public ActionResult Edit(int id) {
       return View();
     }
 
-    //
-    // POST: /Faculty/Edit/5
+    //======================================
+    // Edit() - POST: /Faculty/Edit/5
+    //======================================
     [HttpPost]
     public ActionResult Edit(int id, FormCollection collection) {
       try {
@@ -68,24 +91,29 @@ namespace myAppMemory.Controllers {
       }
     }
 
-    //
-    // GET: /Faculty/Delete/5
-    public ActionResult Delete(int id) {
-      return View();
+    // I
+
+    //======================================
+    // Index() - GET: /Faculty/
+    //======================================
+    public ActionResult Index() {
+      //ViewBag.facs = rf.sortFaculties(); // 20
+      //return View();
+      return View(rf.getFacultyNames());
     }
 
-    //
-    // POST: /Faculty/Delete/5
-    [HttpPost]
-    public ActionResult Delete(int id, FormCollection collection) {
-      try {
-        // TODO: Add delete logic here
+    // V
 
-        return RedirectToAction("Index");
-      }
-      catch {
-        return View();
-      }
-    }
+    //======================================
+    // View()
+    //======================================
+    /*private ActionResult View(FacultyPublic facultyPublic) {
+      throw new NotImplementedException();
+    }*/
+
+
+
+
+
   }
 }

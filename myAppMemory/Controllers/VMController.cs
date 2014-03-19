@@ -7,14 +7,14 @@ using myAppMemory.ViewModels; // 7
 
 namespace myAppMemory.Controllers {
   public class VMController : Controller {
-    private Repo_Student repo = new Repo_Student(); // 10
+    private Repo_Student rs = new Repo_Student(); // 10
     //
     // GET: /VM/
     public ActionResult Index() { // 20
 
       //ViewBag.id = 1;
 
-      return View(repo.getStudentNames()); // 30 
+      return View(rs.getStudentNames()); // 30 
     }
 
     public ActionResult Create() { // 40
@@ -23,7 +23,7 @@ namespace myAppMemory.Controllers {
     [HttpPost]
     public ActionResult Create(StudentFull st) { // 50
       if (ModelState.IsValid) { 
-        repo.createStudent(st);
+        rs.createStudent(st);
         return RedirectToAction("Index");
       }
       else { // 60
@@ -32,7 +32,7 @@ namespace myAppMemory.Controllers {
     }
 
     public ActionResult Details(int? id) { // 70
-      return View(repo.getStudentPublic(id)); // 80
+      return View(rs.getStudentPublic(id)); // 80
     }
 
     public ActionResult Error() {

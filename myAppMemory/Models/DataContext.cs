@@ -9,8 +9,13 @@ namespace myAppMemory.Models {
     public DataContext() : base("name=DataContext") { }
 
     public DbSet<Student> Students { get; set; }
-    public DbSet<Faculty> Faculty { get; set; }
+    public DbSet<Faculty> Faculties { get; set; }
     public DbSet<Course> Courses { get; set; }
+    public DbSet<Cancellation> Cancellations { get; set; }
+    public DbSet<Message> Messages { get; set; }
+
+
+    public DbSet<MyUserInfo> MyUserInfo { get; set; }
 
     public System.Data.Entity.DbSet<myAppMemory.ViewModels.StudentFull> StudentFulls { get; set; }
 

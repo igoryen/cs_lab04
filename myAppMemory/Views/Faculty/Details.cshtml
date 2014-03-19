@@ -1,4 +1,4 @@
-﻿@model myAppMemory.ViewModels.FacultyPublic
+﻿@model myAppMemory.ViewModels.FacultyFull
 
 @{
     ViewBag.Title = "Details";
@@ -21,9 +21,20 @@
 
         <dt>@Html.DisplayNameFor(model => model.Phone)</dt>
         <dd>@Html.DisplayFor(model => model.Phone)</dd>
+
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.FacultyId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+<p>Teaches @Html.DisplayFor(model => model.Courses.Count) courses:</p>
+@{
+    int i = 0;
+}
+    @foreach (var item in Model.Courses) {
+        
+
+        <p>@Html.DisplayFor(model => item.CourseCode)</p>
+
+    }

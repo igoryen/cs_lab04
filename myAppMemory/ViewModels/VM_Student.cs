@@ -6,7 +6,7 @@ using System.Web;
 using myAppMemory.Models;
 
 namespace myAppMemory.ViewModels {
-  public class StudentsForList {
+  public class StudentBase {
     [Key]
     public int StudentId { get; set; }
 
@@ -15,10 +15,10 @@ namespace myAppMemory.ViewModels {
     public string StudentNumber { get; set; }
   }
 
-  public class StudentFull : StudentsForList {
+  public class StudentFull : StudentBase {
 
     public StudentFull() {
-      this.Courses = new List<CourseForList>();
+      this.Courses = new List<CourseBase>();
     }
 
     [Required]
@@ -35,7 +35,7 @@ namespace myAppMemory.ViewModels {
     [RegularExpression("^[2-9]\\d{2}-\\d{3}-\\d{4}$", ErrorMessage = "nnn-nnn-nnnn")]
     public string Phone { get; set; }
 
-    public List<CourseForList> Courses { get; set; }
+    public List<CourseBase> Courses { get; set; }
   }
 
   public class StudentPublic {
