@@ -34,7 +34,7 @@ namespace myAppMemory.Models {
   //===================================================
   public class Cancellation {
     public int Id { get; set; }
-    public string Description { get; set; }
+    public string Message { get; set; }
     public virtual ApplicationUser User { get; set; }
   }
 
@@ -83,13 +83,14 @@ namespace myAppMemory.Models {
   // M
 
   //===================================================
-  // Message
+  // Message - messages will be Cancellation's attribute
   //===================================================
+  /*
   public class Message {
     public int Id { get; set; }
     public string Body { get; set; }
     public virtual ApplicationUser User { get; set; }
-  }
+  }*/
 
 
   //===================================================

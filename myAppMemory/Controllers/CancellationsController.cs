@@ -58,11 +58,11 @@ namespace myAppMemory.Controllers {
 
     //===================================================
     // Create() - POST: /Cancellations/Create
-    // 20. Include = "Id, Description", but not "User"
+    // 20. Include = "Id, Message", but not "User"
     //===================================================
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<ActionResult> Create([Bind(Include = "Id,Description")] Cancellation cancellation) { // 20
+    public async Task<ActionResult> Create([Bind(Include = "Id,Message")] Cancellation cancellation) { // 20
       var currentUser = await manager.FindByIdAsync(User.Identity.GetUserId());
       if (ModelState.IsValid) {
         cancellation.User = currentUser;
@@ -161,7 +161,7 @@ namespace myAppMemory.Controllers {
     //===================================================
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<ActionResult> Edit([Bind(Include = "Id,Description")] Cancellation cancellation) {
+    public async Task<ActionResult> Edit([Bind(Include = "Id,Message")] Cancellation cancellation) {
       if (ModelState.IsValid) {
         dc.Entry(cancellation).State = EntityState.Modified;
         await dc.SaveChangesAsync();

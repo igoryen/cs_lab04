@@ -21,7 +21,7 @@ namespace myAppMemory.Models {
     public DbSet<Cancellation> Cancellations { get; set; }
     public DbSet<Course> Courses { get; set; }
     public DbSet<Faculty> Faculties { get; set; }
-    public DbSet<Message> Messages { get; set; }
+    //public DbSet<Message> Messages { get; set; }
     public DbSet<MyUserInfo> MyUserInfo { get; set; }
     public DbSet<Student> Students { get; set; }
 
