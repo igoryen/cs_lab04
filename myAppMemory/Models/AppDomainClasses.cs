@@ -103,8 +103,9 @@ namespace myAppMemory.Models {
 
 
   //===================================================
-  // MyDbContext
+  // MyDbContext -- the code should have been in Models/DataContext.cs
   //===================================================
+  /*
   public class MyDbContext : IdentityDbContext<ApplicationUser> {
     public MyDbContext()
       : base("DefaultConnection") {
@@ -121,8 +122,8 @@ namespace myAppMemory.Models {
     public DbSet<Cancellation> Cancellations { get; set; }
 
     public DbSet<MyUserInfo> MyUserInfo { get; set; }
-  */
-  }
+  
+  }*/
 
 
   // P
@@ -178,6 +179,6 @@ namespace myAppMemory.Models {
     [RegularExpression("^[0][0-9]{8}$", ErrorMessage = "0 followed by 8 digits")]
     public string StudentNumber { get; set; }
     public List<Course> Courses { get; set; }
-  }
+  } // Student
 
 }
