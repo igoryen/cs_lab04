@@ -20,7 +20,7 @@ namespace myAppMemory.Controllers {
     public ActionResult Create() { // 40
       return View();
     }
-    [HttpPost]
+    /*[HttpPost]
     public ActionResult Create(StudentFull st) { // 50
       if (ModelState.IsValid) { 
         rs.createStudent(st);
@@ -30,6 +30,7 @@ namespace myAppMemory.Controllers {
         return View("Error");
       }
     }
+     */
 
     public ActionResult Details(int? id) { // 70
       return View(rs.getStudentPublic(id)); // 80

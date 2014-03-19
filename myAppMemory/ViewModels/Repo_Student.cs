@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using myAppMemory.Models;
 using System.Web.Mvc;
+using AutoMapper;
 
 namespace myAppMemory.ViewModels {
 
@@ -47,13 +48,15 @@ namespace myAppMemory.ViewModels {
      */
 
     //======================================
-    public StudentFull createStudent(StudentFull st/*, string ids*/) {
+    public StudentFull createStudent(StudentFull st, string ids) {
       Student stu = new Student(st.FirstName, st.LastName, st.Phone, st.StudentNumber); // 100 
-
-      stu.Id = Students.Max(n => n.Id) + 1;
-      Students.Add(stu);
-      return st;
+      
       /*
+      stu.Id = Students.Max(n => n.Id) + 1;
+      dc.Students.Add(stu);
+      return st;
+      */
+      
       List<Int32> ls = new List<int>(); // 105
       var nums = ids.Split(','); // 110
 
@@ -70,7 +73,7 @@ namespace myAppMemory.ViewModels {
       dc.SaveChanges(); // 130
 
       return getStudentFull(stu.Id); // 135
-      */
+      
     }
 
     // G
@@ -120,6 +123,15 @@ namespace myAppMemory.ViewModels {
       return rls; // 90
     }
 
+    //======================================
+    // getListOfStudentFullAM() - with Automapper
+    //======================================
+    public IEnumerable<StudentFull> getListOfStudentFullAM() {
+      var students = dc.Students.OrderBy(n => n.LastName);
+      if (students == null) return null;
+      return Mapper.Map<IEnumerable<StudentFull>>(students);
+    }
+
 
     //======================================
     // getStudentsFull() -- gets a List of all Students, mapped to a List of StudentFull objects, sorted by LastName
@@ -165,7 +177,7 @@ namespace myAppMemory.ViewModels {
       //var st = this.Students.OrderBy(n => n.LastName);    // 100
       var st = dc.Students.OrderBy(n => n.LastName);    // 100
 
-      List<StudentName> rls = new List<StudentName>();    // 105
+      List<StudentName> lsn = new List<StudentName>();    // 105
 
       foreach (var item in st) {      // 110
         StudentName row = new StudentName(); // 115
@@ -174,11 +186,24 @@ namespace myAppMemory.ViewModels {
         row.FirstName = item.FirstName;
         row.LastName = item.LastName;
 
-        rls.Add(row); // 51 
+        lsn.Add(row); // 51 
       }
-      return rls; // 52
+      return lsn; // 52
     }
 
+    //======================================
+    // getStudentNamesAM() -- with Automapper
+    //======================================
+    public IEnumerable<StudentName> getStudentNamesAM() { // 95
+
+      //var st = this.Students.OrderBy(n => n.LastName);    // 100
+      var sn = dc.Students.OrderBy(n => n.LastName);    // 100
+
+      if (sn == null) return null;
+
+      return Mapper.Map<IEnumerable<StudentName>>(sn);
+
+    }
 
     //======================================
     // getStudentsPublic()  -- gets a List of all Students, mapped to a List of StudentPublic objects, sorted by StudentNumber
@@ -192,8 +217,8 @@ namespace myAppMemory.ViewModels {
      */
     //======================================
     public IEnumerable<StudentPublic> getStudentsPublic() { // 1
-      //var ls = dc.Students.OrderBy(n => n.StudentNumber); // 20
-      var st = this.Students.OrderBy(n => n.StudentNumber); // 20
+      var st = dc.Students.OrderBy(n => n.StudentNumber); // 20
+      //var st = this.Students.OrderBy(n => n.StudentNumber); // 20
       List<StudentPublic> rls = new List<StudentPublic>(); // 25
 
       foreach (var item in st) {  // 30

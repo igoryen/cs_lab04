@@ -15,9 +15,7 @@ namespace myAppMemory.Controllers {
     // GET: /Home/
 
     public ActionResult Index() {
-      //ViewBag.stu = man.sortStudents(); // 20
-      ViewBag.stu = rs.getStudentNames();
-      return View();
+      return View(rs.getListOfStudentFullAM());
     }
 
     public ActionResult ViewAll() {
@@ -30,8 +28,7 @@ namespace myAppMemory.Controllers {
 
     [HttpPost]
     public ActionResult Create(Student student) {
-      if (ModelState.IsValid) // 50
-              {
+      if (ModelState.IsValid){
         man.createStudent(student);
         return RedirectToAction("ViewAll");
       }
@@ -57,22 +54,3 @@ namespace myAppMemory.Controllers {
 
   }
 }
-
-// 10. Materialize/make a manager
-
-// Index()
-/* 20. call Manager.cs/sortStudents(); store the retval in a var; put it into the ViewBag
- */
-
-// ViewAll()
-/* 30. == #20?
- */
-
-// Create(Student student)
-/* 50. 
- * 
- */
-
-// Ddl()
-/* 60. == #20
- */
