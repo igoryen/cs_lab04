@@ -15,47 +15,9 @@ namespace myAppMemory.Models {
   public class Initiallizer : DropCreateDatabaseAlways<DataContext> {
 
     //===================================================
-    // InitianlizeIdentityForEF()
+    // InitializeTables()
     //===================================================
-    //private void InitializeIdentityForEF(MyDbContext context) {
-    private void InitializeIdentityForEF(DataContext context) {
-
-      var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
-      var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-      var myinfo = new MyUserInfo() { FirstName = "Pranav", LastName = "Rastogi" };
-
-      string name = "Admin";
-      string password = "123456";
-      string test = "test";
-
-      //Create Role Test and User Test
-      RoleManager.Create(new IdentityRole(test));
-      UserManager.Create(new ApplicationUser() { UserName = test });
-
-      //Create Role Admin if it does not exist
-      if (!RoleManager.RoleExists(name)) {
-        var roleresult = RoleManager.Create(new IdentityRole(name));
-      }
-
-      //Create User=Admin with password=123456
-      var user = new ApplicationUser();
-      user.UserName = name;
-      user.HomeTown = "Seattle";
-      user.MyUserInfo = myinfo;
-      var adminresult = UserManager.Create(user, password);
-
-      //Add User Admin to Role Admin
-      if (adminresult.Succeeded) {
-        var result = UserManager.AddToRole(user.Id, name);
-      }
-    }
-
-    protected override void Seed(DataContext dc) {
-      InitializeIdentityForEF(dc);
-      base.Seed(dc);
-
-
-
+    private void InitializeTables(DataContext dc){
       //-------------------------------------
       // #1 - initialize a few student rows
       // 10. create a student row
@@ -238,15 +200,53 @@ namespace myAppMemory.Models {
       ron.Courses.Add(rus123);
       dc.Faculties.Add(ron); // 35
 
-      
-
-
-
       //dc.Faculty.Add(fac);
 
       dc.SaveChanges(); // commit changes
-
     }
+
+    //===================================================
+    // InitianlizeIdentityForEF()
+    //===================================================
+    //private void InitializeIdentityForEF(MyDbContext context) {
+    private void InitializeIdentityForEF(DataContext context) {
+
+      var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+      var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+      var myinfo = new MyUserInfo() { FirstName = "Pranav", LastName = "Rastogi" };
+
+      string name = "Admin";
+      string password = "123456";
+      string test = "test";
+
+      //Create Role Test and User Test
+      RoleManager.Create(new IdentityRole(test));
+      UserManager.Create(new ApplicationUser() { UserName = test });
+
+      //Create Role Admin if it does not exist
+      if (!RoleManager.RoleExists(name)) {
+        var roleresult = RoleManager.Create(new IdentityRole(name));
+      }
+
+      //Create User=Admin with password=123456
+      var user = new ApplicationUser();
+      user.UserName = name;
+      user.HomeTown = "Seattle";
+      user.MyUserInfo = myinfo;
+      var adminresult = UserManager.Create(user, password);
+
+      //Add User Admin to Role Admin
+      if (adminresult.Succeeded) {
+        var result = UserManager.AddToRole(user.Id, name);
+      }
+    }
+
+    protected override void Seed(DataContext dc) {
+      InitializeIdentityForEF(dc);
+      InitializeTables(dc);
+      base.Seed(dc);
+    }
+
 
     public List<Student> Students { get; set; }
     public List<Faculty> Faculties { get; set; }
