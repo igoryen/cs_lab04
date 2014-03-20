@@ -213,31 +213,63 @@ namespace myAppMemory.Models {
 
       var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
       var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
-      var myinfo = new MyUserInfo() { FirstName = "Pranav", LastName = "Rastogi" };
 
-      string name = "Admin";
-      string password = "123456";
-      string test = "test";
-
-      //Create Role Test and User Test
-      RoleManager.Create(new IdentityRole(test));
-      UserManager.Create(new ApplicationUser() { UserName = test });
-
-      //Create Role Admin if it does not exist
-      if (!RoleManager.RoleExists(name)) {
-        var roleresult = RoleManager.Create(new IdentityRole(name));
+      
+      //================================================
+      // *** CREATE ROLES SECTION ***
+      // 03. set up the role's name
+      // 05. check if a role with this name exists
+      // 06. if such a role doesn't exist, create it
+      //================================================
+      string roleName1 = "Admin"; // 3
+      if (!RoleManager.RoleExists(roleName1)) { // 5
+        var role1CreateResult = RoleManager.Create(new IdentityRole(roleName1)); // 6
       }
 
-      //Create User=Admin with password=123456
-      var user = new ApplicationUser();
-      user.UserName = name;
-      user.HomeTown = "Seattle";
-      user.MyUserInfo = myinfo;
-      var adminresult = UserManager.Create(user, password);
+      string roleName2 = "Student";
+      if (!RoleManager.RoleExists(roleName2)) {
+        var role2CreateResult = RoleManager.Create(new IdentityRole(roleName2));
+      }
 
-      //Add User Admin to Role Admin
-      if (adminresult.Succeeded) {
-        var result = UserManager.AddToRole(user.Id, name);
+      string roleName3 = "Faculty";
+      if (!RoleManager.RoleExists(roleName3)) {
+        var role3CreateResult = RoleManager.Create(new IdentityRole(roleName3));
+      }
+      //================================================
+      // *** CREATE APP USERS SECTION ***
+      // 10. set up an app user
+      // 11. set up a nickname for the user
+      // 12. set up the user password
+      // 14. fill out the user's info
+      // 20. assign a nick name to the user
+      // 22. assign the user's filled out info
+      // 30. attempt to create the app user with his pw
+      // 35. if succeeded to create user
+      // 40. add the app user to role "Admin"
+      //================================================
+     
+      var user1 = new ApplicationUser(); // 10
+      //string userName1 = "Igor"; // 11
+      string userPw1 = "123456"; // 12
+      var userInfo1 = new MyUserInfo() { FirstName = "Igor", LastName = "Entaltsev" }; // 14
+      user1.UserName = "Igor"; // 20
+      user1.HomeTown = "Sochi";
+      user1.MyUserInfo = userInfo1; // 22
+      var user1CreateResult = UserManager.Create(user1, userPw1); // 30
+      if (user1CreateResult.Succeeded) { // 35
+        var addUser1ToRole1Result = UserManager.AddToRole(user1.Id, roleName1); // 40
+      }
+
+      //===============================================
+      var user2 = new ApplicationUser(); // 10
+      string userPw2 = "123456"; // 12
+      var userInfo2 = new MyUserInfo() { FirstName = "Igor", LastName = "Entaltsev" }; // 14
+      user2.UserName = "Yggy"; // 20
+      user2.HomeTown = "Sochi";
+      user2.MyUserInfo = userInfo2; // 22
+      var user2Create = UserManager.Create(user2, userPw2); // 30
+      if (user2Create.Succeeded) { // 35
+        var addUser2ToRole2Result = UserManager.AddToRole(user2.Id, roleName2); // 40
       }
     }
 
