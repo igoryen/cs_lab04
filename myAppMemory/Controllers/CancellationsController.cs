@@ -33,6 +33,7 @@ namespace myAppMemory.Controllers {
     //===================================================
     // All() - GET: /Cancellations/All
     // 10. this route is locked for all but Admin
+    //   i.e. Igor/123456
     //===================================================
     [Authorize(Roles = "Admin")] // 10
     public async Task<ActionResult> All() {
