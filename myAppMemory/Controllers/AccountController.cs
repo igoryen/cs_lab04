@@ -14,7 +14,7 @@ namespace myAppMemory.Controllers {
   [Authorize]
   public class AccountController : Controller {
     public AccountController()
-      : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()))) {
+      : this(new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new DataContext()))) {
     }
 
     public AccountController(UserManager<ApplicationUser> userManager) {
